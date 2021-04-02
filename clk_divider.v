@@ -15,7 +15,7 @@ module clk_divider
 
     always @( posedge clk_in )
     begin
-        if (rst || terminate)
+        if (rst | terminate)
             count <= 0;
         else
             count <= count + 1;
