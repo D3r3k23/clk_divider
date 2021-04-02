@@ -24,7 +24,7 @@ module clk_divider_tb;
         #2000
         rst = 1'b0;
         
-        #40000
+        #60000
         $finish;
 
     end // test
