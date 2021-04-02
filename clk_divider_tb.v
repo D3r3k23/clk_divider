@@ -1,7 +1,7 @@
 
 `timescale 1us / 1ns
 
-module clk_divider_tb();
+module clk_divider_tb;
 
     reg  clk_in;
     reg  rst;
@@ -9,10 +9,9 @@ module clk_divider_tb();
 
     // 1 kHz clock gen
     initial     clk_in = 1'b0;
-    always #1ms clk_in <= ~clk_in;
+    always #500 clk_in <= ~clk_in;
 
-    clk_divider #( .DIV(4) )
-    DUT
+    clk_divider #( .DIV(4) ) DUT
     (
         .clk_in  ( clk_in  ), // 1000 hz
         .rst     ( rst     ),
@@ -22,7 +21,7 @@ module clk_divider_tb();
     initial begin : test
 
         rst = 1'b1;
-        #100
+        #100us
         rst = 1'b0;
         
         #40ms
