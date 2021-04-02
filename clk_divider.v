@@ -8,8 +8,8 @@ module clk_divider
     output reg clk_out
 );
 
-    localparam integer TC = (DIV / 2) - 1;
-    integer count = 0;
+    localparam integer TC = (DIV / 2) - 1; // Terminal count
+    integer count;
 
     wire terminate = (count == TC);
 
