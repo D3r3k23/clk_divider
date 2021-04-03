@@ -4,8 +4,8 @@
 module clk_divider_tb;
 
     // Inputs
-    reg  clk_in;
-    reg  rst;
+    reg clk_in;
+    reg rst;
     
     // Output
     wire clk_out;
