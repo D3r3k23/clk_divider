@@ -1,4 +1,6 @@
 
+// Produces clk_out with the frequency of clk_in
+// divided by DIV <- multiples of 2
 module clk_divider
 #(parameter
     integer DIV = 2
@@ -9,9 +11,9 @@ module clk_divider
 );
 
     localparam integer TC = (DIV / 2) - 1; // Terminal count
-    integer count;
+    integer count; // 32 bits
 
-    wire terminate = (count == TC);
+    wire terminate = (count == TC); // --> Reset counter, trigger clk_out edge
 
     always @( posedge clk_in )
     begin
