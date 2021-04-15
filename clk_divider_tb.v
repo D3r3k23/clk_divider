@@ -14,7 +14,7 @@ module clk_divider_tb;
     initial     clk_in = 1'b0;
     always #500 clk_in <= ~clk_in; // 1 ms period
 
-    clk_divider #( .DIV(10) ) DUT
+    clk_divider #( .DIV(10) ) DUT // Divide clock frequency by 10
     (
         .clk_in  ( clk_in  ), // 1000 Hz
         .rst     ( rst     ),
