@@ -12,7 +12,7 @@ module clk_divider_tb;
 
     // 1 kHz clock gen
     initial     clk_in = 1'b0;
-    always #500 clk_in <= ~clk_in; // 1 ms period
+    always #500 clk_in = ~clk_in; // 1 ms period
 
     clk_divider #( .DIV(10) ) DUT // Divide clock frequency by 10
     (
