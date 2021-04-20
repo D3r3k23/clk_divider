@@ -1,6 +1,6 @@
 
-// Produces clk_out with the frequency of clk_in
-// divided by DIV <- multiples of 2
+// Produces clk_out with the frequency of clk_in divided by DIV
+// DIV should be even
 module clk_divider
 #(parameter
     integer DIV = 2
